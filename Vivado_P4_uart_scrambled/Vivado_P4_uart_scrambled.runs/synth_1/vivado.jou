@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Mar 31 15:37:57 2021
+# Process ID: 7950
+# Current directory: /home/adamdunc/repos/whs/Vivado_P4_uart_scrambled/Vivado_P4_uart_scrambled.runs/synth_1
+# Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: /home/adamdunc/repos/whs/Vivado_P4_uart_scrambled/Vivado_P4_uart_scrambled.runs/synth_1/top.vds
+# Journal file: /home/adamdunc/repos/whs/Vivado_P4_uart_scrambled/Vivado_P4_uart_scrambled.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
