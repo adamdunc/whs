@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1617199388">
+  <File Type="VDS-TIMINGSUMMARY" Name="display_top_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="display_top.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="display_top_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="display_top_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="display_top_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="display_top.vds"/>
+  <File Type="REPORTS-TCL" Name="display_top_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="display_top_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="display_top.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/background_ghost_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/background_ghost_rom.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/binary2bcd.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/binary2bcd.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/blocks_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/blocks_rom.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/eggs.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/eggs.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/eggs_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/eggs_rom.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/enemy_collision.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/enemy_collision.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/game_logo_display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/game_logo_display.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/game_logo_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/game_logo_rom.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/game_state_machine.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/game_state_machine.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/gameover_display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/gameover_display.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/gameover_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/gameover_rom.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/ghost_bottom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/ghost_bottom.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/ghost_crazy.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/ghost_crazy.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/ghost_crazy_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/ghost_crazy_rom.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/ghost_normal_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/ghost_normal_rom.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/ghost_top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/ghost_top.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/grounded.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/grounded.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/hearts_display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/hearts_display.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/hearts_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/hearts_rom.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/nes_controller.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/nes_controller.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/numbers_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/numbers_rom.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/platforms.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/platforms.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/score_display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/score_display.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/vga_sync.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/vga_sync.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/walls_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/walls_rom.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/yoshi_ghost_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/yoshi_ghost_rom.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/yoshi_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/yoshi_rom.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/yoshi_sprite.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/yoshi_sprite.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P0_nightmare/display_top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/display_top.v"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="display_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/P0_nightmare/basys3.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../P0_nightmare/basys3.xdc"/>
+        <Attr Name="ImportTime" Val="1617196483"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
