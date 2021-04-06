@@ -1,0 +1,10 @@
+0.7
+2020.1
+May 27 2020
+19:59:15
+/home/adamdunc/repos/whs/Vivado_pong_uart/Vivado_pong_uart.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+/home/adamdunc/repos/whs/Vivado_pong_uart/Vivado_pong_uart.srcs/sim_1/new/top.v,1617648276,verilog,,,,tb_top,,,,,,,,
+/home/adamdunc/repos/whs/Vivado_pong_uart/Vivado_pong_uart.srcs/sources_1/imports/rtl/uart_rx.v,1617215610,verilog,,/home/adamdunc/repos/whs/Vivado_pong_uart/Vivado_pong_uart.srcs/sources_1/imports/rtl/uart_tx.v,,uart_rx,,,,,,,,
+/home/adamdunc/repos/whs/Vivado_pong_uart/Vivado_pong_uart.srcs/sources_1/imports/rtl/uart_tx.v,1617215610,verilog,,/home/adamdunc/repos/whs/Vivado_pong_uart/Vivado_pong_uart.srcs/sim_1/new/top.v,,uart_tx,,,,,,,,
+/home/adamdunc/repos/whs/Vivado_pong_uart/Vivado_pong_uart.srcs/sources_1/imports/src/hvsync_generator.v,1617647821,verilog,,/home/adamdunc/repos/whs/Vivado_pong_uart/Vivado_pong_uart.srcs/sources_1/imports/src/pong.v,,hvsync_generator,,,,,,,,
+/home/adamdunc/repos/whs/Vivado_pong_uart/Vivado_pong_uart.srcs/sources_1/imports/src/pong.v,1617652370,verilog,,/home/adamdunc/repos/whs/Vivado_pong_uart/Vivado_pong_uart.srcs/sources_1/imports/rtl/uart_rx.v,,pong,,,,,,,,

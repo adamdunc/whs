@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Apr  4 10:49:46 2021
+# Process ID: 14900
+# Current directory: /home/adamdunc/repos/whs/Vivado_pong/Vivado_pong.runs/synth_1
+# Command line: vivado -log pong.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pong.tcl
+# Log file: /home/adamdunc/repos/whs/Vivado_pong/Vivado_pong.runs/synth_1/pong.vds
+# Journal file: /home/adamdunc/repos/whs/Vivado_pong/Vivado_pong.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source pong.tcl -notrace
