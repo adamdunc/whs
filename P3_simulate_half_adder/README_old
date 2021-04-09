@@ -1,0 +1,36 @@
+open Vivado
+create new project "student_P2"
+    (do not specify sources)
+select part xc7a35ticpg236-1l
+create design file "top.v"
+copy/type the lines below into top.v:
+
+module top(
+    input A,
+    input B,
+    output SUM,
+    output CARRY
+    );
+
+  assign SUM   = A ^ B;  // bitwise xor
+  assign CARRY = A & B;  // bitwise and    
+    
+endmodule
+
+create constraints file "top.xdc"
+copy/type the lines below into top.xdc
+
+set_property PACKAGE_PIN V17 [get_ports A]
+set_property IOSTANDARD LVCMOS33 [get_ports A]
+set_property PACKAGE_PIN V16 [get_ports B]
+set_property IOSTANDARD LVCMOS33 [get_ports B]
+set_property PACKAGE_PIN U16 [get_ports SUM]
+set_property IOSTANDARD LVCMOS33 [get_ports SUM]
+set_property PACKAGE_PIN E19 [get_ports CARRY]
+set_property IOSTANDARD LVCMOS33 [get_ports CARRY]
+
+open hardware manager in Vivado
+click program device
+select "top.bit" from student_p2.runs/impl_1
+click program
+you should see SW0,SW1 on BASYS3 make LED0,LED1 toggle like a half adder
