@@ -1,7 +1,54 @@
 open Vivado
 open project "student_P2"
-add simulation file "tb_top.v"
-copy/type the lines below into "tb_top.v":
+File>Add sources> select "Add or create simulation sources"> click next
+Select "Create file", File name = "tb_top", click finish
+Define Module: don't add any ports, just click next
+Now we have a tb_top.v testbench file created where we need to instantiate our half adder circuit called "top"
+First we need to declare registers that will drive our testbench inputs.
+Add the following two lines below just before the endmodule statement in tb_top.v:
+
+    reg a = 1'b0; // register for half adder inputs
+    reg b = 1'b0; // register for half adder inputs
+
+Next we need to declare wires that connect to our testbench outputs.
+Add the following two lines below just after the reg statements in tb_top.v:
+
+    wire sum;
+    wire carry;
+
+Next we need to instandiate a "top" that contains our half adder
+Add the following two lines below just after the wire statements in tb_top.v:
+
+    top UUT (.A(a),.B(b),.SUM(sum),.CARRY(carry));
+
+Next we need to add an initial block that will allow us to drive inputs with respect to time
+Note that the "#1000" statements mean to wait for 1000 ns. 
+They are inserted to provide the amount of time "a" and "b" will remain at their assigned value.
+Add the following two lines below just after the top statements in tb_top.v:
+    
+    initial begin
+    a = 0;
+    b = 0;
+    #1000
+    a = 0;
+    b = 1;
+    #1000
+    a = 1;
+    b = 1;
+    #1000
+    
+Now we add a line that prints "test complete" to the console"
+Add the below line to tb_top.v: 
+
+    $display("test complete");
+    
+Then we add an "end" to close out the initial block.
+Add the line below to tb_top.v: 
+end
+
+Note that the line after the "end" should be our endmodule, which ends the the module.
+
+Now, your completed tb_top file should look like the file below:
 
 `timescale 1ns / 1ps
 
@@ -24,8 +71,6 @@ module tb_top();
     b = 1;
     #1000
 
-// add code here
-
     a = 1;
     b = 1;
     #1000
@@ -34,10 +79,13 @@ end
 
 endmodule
 
-click "run simulation in vivado"
-observe a,b toggle
-observe sum, carry toggle
+From Flow Navigator, click "run simulation in vivado" with default "behavioral" option checked
+You should see a simulation waveform pop up with green waveform images
+click the play button to complete the simulation
+You should see the following: 
+    observe a,b toggle
+    observe sum, carry toggle
 
 questions:
 1) What does #1000 represent?
-2) Can you add code to check condition where a = 1 and b = 0?
+2) Can you add code to test condition where a = 1 and b = 0?
