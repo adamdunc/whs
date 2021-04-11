@@ -59,6 +59,13 @@ to see this on your board:
 questions:
 1) use your board to add decimal 5 and decimal 6 together. What do you set SW values to? What is LED result?
 
+optional: run simulation
+File>Add sources> select "Add or create simulation sources"> click next
+Select "Add file", File name = "tb_top.v" from the P4 directory where this README lives
+From Flow Navigator, click "run simulation in vivado" with default "behavioral" option checked
+You should see a simulation waveform pop up with green waveform images
+click the play button to complete the simulation
+
 This project has two parts.
 Part II (add other operands, lean about always blocks).
 
@@ -75,6 +82,9 @@ begin // always blocks have a "begin" and "end"
     else
         Z = 0;
 end // "end" for always
+
+We next need to change the output ports that get assigned in an always block to be type "reg".
+Change "output [15:0] Z" to "output reg [15:0] Z"
 
 Now let's add the following block to control the seven segment LEDs to make Z look like decimal numbers 
 always @ (*) begin
@@ -94,6 +104,10 @@ always @ (*) begin
     default : SSEG_CA = 8'b01000000;   
     endcase   
 end
+
+We similarly need to change the output ports that get assigned in this always block to be type "reg".
+Change "output [7:0] SSEG_CA" to "output reg [7:0] SSEG_CA"
+Change "output [3:0] SSEG_AN" to output reg [3:0] SSEG_AN,
 
 Next step is to generate a bitstream.
 Within Flow Navigator, click "generate bitstream" (note this may take 1-2 min to complete)
