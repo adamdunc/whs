@@ -1,59 +1,64 @@
+This project has two parts.
+Part I (simple addition of binary numbers).
+
 open Vivado
 create new project 
-    Project Name: Name =  "student_P2", click next
+    Project Name: Name =  "student_P4", click next
     Project Type: keep default options for RTL Project, click next
     Add Sources: just click next
-    Add constrains: just click next
+    Add constraints: select top.xdc file located in github.com/adamdunc/whs/P4_calculator/
     Default part: search for and select "xc7a35ticpg236-1l" then click next
     New Project Summary: cick finish
+
+First, let's open the top.xdc and look/understand what we just added.
+top.xdc maps:
+    "A[7:0]" pins of FPGA to SW[7:0]
+    "B[7:0]" pins of FPGA to SW[15:8]
+    "Z[15:0]" pins of FPGA to LED[15:0]
+    btnC,btnL, etc map to the center,left,etc pushbuttons
+    SSEG_CA[7:0] map to the 8 cathode pins on the 7 segment LEDs
+    SSEG_AN[7:0] map to the 4 anode pins on the 7 segment LEDs
+    see "https://www.fpga4student.com/2017/09/seven-segment-led-display-controller-basys3-fpga.html" for more info on how 7 segment LED works
+    
+Now, lets write some Verilog code to add two numbers
 File>Add sources> select "Add or create design sources"> click next
 Select "Create file", File name = "top", click finish
 Define Module: add four ports as below and then click finish
-    Port name = A, Direction = input
-    Port name = B, Direction = input
-    Port name = SUM, Direction = input
-    Port name = CARRY, Direction = input
-Now we have a top.v file created with our inputs and outputs to the half adder circuit
-Next we tell Vivado to create logic gates to implement the half adder functionality using "assign statements"
-Add the following two lines just before the endmodule line:
-  assign SUM   = A ^ B;  // bitwise xor
-  assign CARRY = A & B;  // bitwise and  
+    Port name = A, bus, MSB=7, LSB=0, Direction = input
+    Port name = B, bus, MSB=7, LSB=0, Direction = input
+    Port name = Z, bus, MSB=15, LSB=0, Direction = output
+    Port name = SSEG_CA, bus, MSB=7, LSB=0, Direction = output
+    Port name = SSEG_AN, bus, MSB=3, LSB=0, Direction = output
+    Port name = btnU, Direction = input
+    Port name = btnL, Direction = input
+    Port name = btnR, Direction = input
+    Port name = btnD, Direction = input
+Now we have a top.v file created with our inputs and outputs for our calculator
+First we tell Vivado add our two 8 bit values together using the "+" addition operator
+Add the folllowing line just before the endmodule line:
+  
+  assign Z   = A + B;  // arithmetic add operation
 
-Now your top.v file should look like below:
-module top(
-    input A,
-    input B,
-    output SUM,
-    output CARRY
-    );
-  assign SUM   = A ^ B;  // bitwise xor
-  assign CARRY = A & B;  // bitwise and     
-endmodule
+Save file top.v
 
-File>Add sources> select "Add or create constraints">select "create file"> type "top" for name, click OK
-Within sources window, expand "Constraints" to double click on "top.xdc"
-Add the following lines to map ports to physical pins on the FPGA
-
-set_property PACKAGE_PIN V17 [get_ports A]
-set_property IOSTANDARD LVCMOS33 [get_ports A]
-set_property PACKAGE_PIN V16 [get_ports B]
-set_property IOSTANDARD LVCMOS33 [get_ports B]
-set_property PACKAGE_PIN U16 [get_ports SUM]
-set_property IOSTANDARD LVCMOS33 [get_ports SUM]
-set_property PACKAGE_PIN E19 [get_ports CARRY]
-set_property IOSTANDARD LVCMOS33 [get_ports CARRY]
-
-Now you should have a completed top.v and top.xdc file.
 Next step is to generate a bitstream.
 Within Flow Navigator, click "generate bitstream" (note this may take 1-2 min to complete)
 When this finishes, you should see a "bitstream complete" window pop up
 
 From Vivado Flow Navigator window, click "open hardware manager"
 At top of Hardware manager window, click "open target">autoconnect
-At top of Hardware manager window, click "program device">select "top.bit" from student_p2.runs/impl_1
+At top of Hardware manager window, click "program device">select "top.bit" from student_p4.runs/impl_1
 click program
-you should see SW0,SW1 on BASYS3 make LED0,LED1 toggle like a half adder
+you should see be able to see A + B represented by LEDs. Note his is all in binary
+i.e. 3 + 4 = 7 in decimal is 00000011 + 00000100 = 00000111 in binary
+to see this on your board:
+    toggle SW9,SW8 to represent A = decimal 3 or binary 0000 0011
+    toggle SW2 to represent B = decimal 4 or binary 0000 0100
+    Now LED2,LED1,LED0 will be lit up to reprsent decimal 7 or binary 0000 0000 0000 0111
 
 questions:
-1) what does the assign statement do?
-2) what is the pupose of the xdc file?
+1) use your board to add decimal 5 and decimal 6 together. What do you set SW values to? What is LED result?
+
+This project has two parts.
+Part II (add other operands).
+
