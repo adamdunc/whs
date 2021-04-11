@@ -60,5 +60,58 @@ questions:
 1) use your board to add decimal 5 and decimal 6 together. What do you set SW values to? What is LED result?
 
 This project has two parts.
-Part II (add other operands).
+Part II (add other operands, lean about always blocks).
+
+Let's replace the simple assign statement with an always block.
+delete any assign statements and copy the lines below 
+always @ (*) // When signals in parenth toggle, the block executes. The "*" is a wildcard.
+begin // always blocks have a "begin" and "end"
+    if (btnU == 1)
+        Z = A * B;
+    else if (btnL == 1)
+        Z = A / B;
+    else if (btnR == 1)
+        Z = A + B;
+    else
+        Z = 0;
+end // "end" for always
+
+Now let's add the following block to control the seven segment LEDs to make Z look like decimal numbers 
+always @ (*) begin
+    SSEG_AN[0] = 0; // 0 means "on" for anode circuitry
+    case (Z[3:0]) //case statement
+    0 : SSEG_CA = 8'b01000000; // 0 also means "on" for 7 segment cathodes
+    1 : SSEG_CA = 8'b01111001;
+    2 : SSEG_CA = 8'b00100100;
+    3 : SSEG_CA = 8'b00110000;
+    4 : SSEG_CA = 8'b00011001;
+    5 : SSEG_CA = 8'b00010010;
+    6 : SSEG_CA = 8'b00000010;
+    7 : SSEG_CA = 8'b01111000;
+    8 : SSEG_CA = 8'b00000000;
+    9 : SSEG_CA = 8'b00010000;
+    //switch off 7 segment character when the bcd digit is not a decimal number.
+    default : SSEG_CA = 8'b01000000;   
+    endcase   
+end
+
+Next step is to generate a bitstream.
+Within Flow Navigator, click "generate bitstream" (note this may take 1-2 min to complete)
+When this finishes, you should see a "bitstream complete" window pop up
+
+From Vivado Flow Navigator window, click "open hardware manager"
+At top of Hardware manager window, click "open target">autoconnect
+At top of Hardware manager window, click "program device">select "top.bit" from student_p4.runs/impl_1
+click program
+Now you should use the pushbuttons to control whether the calculator adds, divides or multiplies
+i.e. 3 + 4 = 7 in decimal is 00000011 + 00000100 = 00000111 in binary
+to see this on your board:
+    toggle SW9,SW8 to represent A = decimal 3 or binary 0000 0011
+    toggle SW2 to represent B = decimal 4 or binary 0000 0100
+    Now LED2,LED1,LED0 will be lit up to reprsent decimal 7 or binary 0000 0000 0000 0111
+    
+questions:
+1) can you add code so that your calculator implements a subtraction function along with the current addition, multiplication and division? 
+(hint: add additional else condition invloving a new pushbutton)
+2) Test this functionality out if time permits and describe results.
 
